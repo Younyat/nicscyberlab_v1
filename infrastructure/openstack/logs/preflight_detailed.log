@@ -1,0 +1,39 @@
+[2025-12-06 15:39:56] === OpenStack Preflight Tester Started ===
+[2025-12-06 15:39:56] [INFO] === CHECKING EXECUTOR IDENTITY ===
+[2025-12-06 15:39:56] [SUCCESS] User: nics (UID=1000)
+[2025-12-06 15:39:56] [DEBUG] Groups: nics adm cdrom sudo dip plugdev users lpadmin
+[2025-12-06 15:39:56] [SUCCESS] User is member of sudo group
+[2025-12-06 15:39:56] [INFO] === CHECKING OS VERSION ===
+[2025-12-06 15:39:56] [DEBUG] Detected: Ubuntu 24.04 LTS
+[2025-12-06 15:39:56] [SUCCESS] Ubuntu version 24.04 is supported
+[2025-12-06 15:39:56] [INFO] === CHECKING SYSTEM RESOURCES ===
+[2025-12-06 15:39:57] [DEBUG] Total RAM: 32095MB | Used: 3724MB | Free: 28371MB
+[2025-12-06 15:39:57] [DEBUG] Disk Total: 195G | Used: 15GB | Free: 170GB
+[2025-12-06 15:39:57] [SUCCESS] RAM requirement satisfied (32095MB >= 6000MB)
+[2025-12-06 15:39:57] [SUCCESS] Disk requirement satisfied (170GB >= 20GB)
+[2025-12-06 15:39:57] [INFO] === CHECKING NETWORK CONNECTIVITY ===
+[2025-12-06 15:39:57] [SUCCESS] External connectivity OK (ping 8.8.8.8)
+[2025-12-06 15:39:57] [INFO] Testing DNS resolution
+[2025-12-06 15:39:57] [SUCCESS] DNS resolution OK (method: dig)
+[2025-12-06 15:39:57] [INFO] === CHECKING PYTHON AVAILABILITY ===
+[2025-12-06 15:39:57] [SUCCESS] Python 3.12.3 found
+[2025-12-06 15:39:57] [INFO] === CHECKING DOCKER STATE ===
+[2025-12-06 15:39:57] [DEBUG] Docker service not active
+[2025-12-06 15:39:57] [DEBUG] Docker not installed yet (will be installed later)
+[2025-12-06 15:39:57] [INFO] === CHECKING NETWORK INTERFACES ===
+[2025-12-06 15:39:57] [SUCCESS] Default interface detected: ens34
+[2025-12-06 15:39:57] [SUCCESS] IPv4 address assigned: 192.168.0.195/24
+[2025-12-06 15:39:57] [INFO] === CHECKING PREVIOUS KOLLA INSTALLATION ===
+[2025-12-06 15:39:57] [SUCCESS] No previous Kolla installation detected
+[2025-12-06 15:39:57] [INFO] === CHECKING VIRTUALENV STATE ===
+[2025-12-06 15:39:57] [SUCCESS] Virtualenv directory clean (will be created later)
+[2025-12-06 15:39:57] [INFO] === CHECKING CRITICAL PACKAGES ===
+[2025-12-06 15:39:57] [DEBUG] Package curl: NOT FOUND (will be installed)
+[2025-12-06 15:39:57] [SUCCESS] Package wget: OK
+[2025-12-06 15:39:57] [SUCCESS] Package git: OK
+[2025-12-06 15:39:57] [WARNING] Missing packages: curl (will be installed by module 01)
+[2025-12-06 15:39:57] [INFO] Results:
+[2025-12-06 15:39:57] [INFO] ✓ Checks Passed: 14
+[2025-12-06 15:39:57] [INFO] ⚠ Warnings: 1
+[2025-12-06 15:39:57] [INFO] ✗ Checks Failed: 0
+[2025-12-06 15:39:57] [SUCCESS] System is ready for OpenStack installation

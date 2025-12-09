@@ -1,0 +1,6 @@
+Initial Module Preflight Test Summary
+=====================================
+Execution Date: 2025-12-06 16:07:44
+Status: FAILED
+
+Last Error: openstack command not found (install with: pip install python-openstackclient)

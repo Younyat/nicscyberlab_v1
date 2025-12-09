@@ -1,0 +1,45 @@
+/* Tools Manager Stylesheet */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --warning-color: #daa520;
+    --dark-bg: #1e1e1e;
+    --light-bg: #f9f9f9;
+    --border-color: #ddd;
+}
+
+.instance-item {
+    background-color: white;
+    border-color: var(--border-color);
+}
+
+.instance-item.active {
+    background-color: #e6e8ff;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.tool-item {
+    background-color: var(--light-bg);
+    border-left-color: var(--primary-color);
+}
+
+/* Terminal styling */
+.terminal {
+    background-color: var(--dark-bg);
+    color: #d4d4d4;
+}
+
+.terminal-line.success {
+    color: var(--success-color);
+}
+
+.terminal-line.error {
+    color: var(--error-color);
+}
+
+.terminal-line.running {
+    color: var(--warning-color);
+}

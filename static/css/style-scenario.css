@@ -1,0 +1,42 @@
+/* Scenario Manager Stylesheet */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --warning-color: #daa520;
+    --dark-bg: #1e1e1e;
+    --light-bg: #f9f9f9;
+    --border-color: #ddd;
+}
+
+/* Scenario graph node colors */
+.cy-node.monitor {
+    background-color: var(--success-color);
+}
+
+.cy-node.attack {
+    background-color: var(--error-color);
+}
+
+.cy-node.victim {
+    background-color: var(--primary-color);
+}
+
+/* Terminal styling */
+.terminal {
+    background-color: var(--dark-bg);
+    color: #d4d4d4;
+}
+
+.terminal-line.success {
+    color: var(--success-color);
+}
+
+.terminal-line.error {
+    color: var(--error-color);
+}
+
+.terminal-line.running {
+    color: var(--warning-color);
+}

@@ -1,0 +1,179 @@
+#!/bin/bash
+# Informational script - shows what the Initial Module Test validates
+# This is NOT an executable test - just documentation
+
+cat << 'EOF'
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║          INITIAL MODULE PREFLIGHT TEST - VALIDATION CHECKLIST            ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+EXECUTED:
+  ✓ ./test_initial_module.sh
+
+WHAT THE TEST VALIDATES:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ STRUCTURAL VALIDATION (No installations, no modifications)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✓ Modules directory exists
+  ✓ Configuration file exists
+  ✓ All 11 required modules present:
+    - log_utils.sh
+    - validate_environment.sh
+    - load_config.sh
+    - upload_images.sh
+    - create_keypair.sh
+    - create_networks.sh
+    - create_security_groups.sh
+    - create_flavors.sh
+    - initial_setup.sh
+    - openstack_cleanup.sh
+    - generate_openrc.sh
+  ✓ All modules are executable (chmod +x)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ CONFIGURATION VALIDATION (JSON syntax & structure)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✓ jq is installed (required for JSON parsing)
+  ✓ initial_config.json is valid JSON (no syntax errors)
+  ✓ All required keys present:
+    - images.list
+    - networks.external.name
+    - networks.external.cidr
+    - networks.external.subnet_name
+    - networks.private.name
+    - networks.private.cidr
+    - networks.private.subnet_name
+    - networks.private.dns
+    - security_group.name
+    - flavors (tiny, small, medium, large)
+    - keypair.name
+    - keypair.path
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ FORMAT VALIDATION (Correctness of configuration values)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✓ External CIDR format valid (10.0.2.0/24)
+  ✓ Private CIDR format valid (192.168.100.0/24)
+  ✓ All flavors have valid specifications:
+    - tiny:   1 vCPU, 512 MB RAM, 5 GB disk ✓
+    - small:  1 vCPU, 1 GB RAM, 10 GB disk ✓
+    - medium: 2 vCPU, 2 GB RAM, 20 GB disk ✓
+    - large:  4 vCPU, 4 GB RAM, 40 GB disk ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ IMAGE VALIDATION (Configuration entries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✓ Image count: 5 configured
+  ✓ Image entries:
+    1. ubuntu-24.04 (from images.list)
+    2. ubuntu-22.04 (from images.list)
+    3. ubuntu-20.04 (from images.list)
+    4. debian-12 (from images.list)
+    5. kali-latest (from images.list)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ URL ACCESSIBILITY (Network/source validation)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✓ Image URLs checked with HEAD request (no downloads)
+  ✓ Reports HTTP 200/301/302/403 as reachable
+  ✓ Non-blocking: Failures here won't stop module execution
+  ✓ Note: curl required for URL checks (installed by OpenStack module)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ OPENSTACK ENVIRONMENT VALIDATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✓ openstack CLI is installed
+  ✓ OpenStack version reported
+  ✓ Environment variables set (from admin-openrc.sh):
+    - OS_AUTH_URL
+    - OS_USERNAME
+    - OS_PASSWORD
+    - OS_PROJECT_NAME
+  ✓ API token can be issued (authentication works)
+  ✓ OpenStack services are listed:
+    - image service (Glance)
+    - network service (Neutron)
+    - compute service (Nova)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ CONFLICT DETECTION (Pre-existing resources)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✓ Checks for existing flavors:
+    - cyberlab-tiny
+    - cyberlab-small
+    - cyberlab-medium
+    - cyberlab-large
+  ✓ Checks for existing networks:
+    - external-net
+    - private-net
+  ✓ Checks for existing security groups:
+    - cyberlab-secgroup
+  ✓ Checks for existing keypairs:
+    - cyberlab-key
+  ✓ Note: Warnings only - module is idempotent and will skip existing resources
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WHAT THE TEST DOES NOT DO:
+
+  ✗ Does NOT install any packages
+  ✗ Does NOT download images (only checks URL headers)
+  ✗ Does NOT create any OpenStack resources
+  ✗ Does NOT modify the system
+  ✗ Does NOT create networks
+  ✗ Does NOT create security groups
+  ✗ Does NOT create flavors
+  ✗ Does NOT create keypairs
+  ✗ Does NOT upload images
+  ✗ Does NOT execute destructive commands
+  ✗ Does NOT require root/sudo
+  ✗ Does NOT make any permanent changes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST EXECUTION & LOGS:
+
+  Location:    ./test_initial_module.sh
+  
+  Run:         cd infrastructure/initial && ./test_initial_module.sh
+  
+  Logs:
+    - logs/test_initial_module.log            (Plain text, timestamped)
+    - logs/test_initial_module.json           (JSON, one object per line)
+    - logs/test_initial_module_summary.txt    (Summary report)
+
+  Duration:    5-10 seconds
+  
+  Exit Code:   0 = All checks passed (ready for Initial module)
+               1 = One or more checks failed (fix issues before execution)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NEXT STEPS (If test passes):
+
+  1. Review test output and summary
+  2. Run Initial module: ./modules/initial_setup.sh
+  3. Monitor logs in logs/ directory
+  4. Verify resources created: openstack image list, openstack network list
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DOCUMENTATION:
+
+  - Main README:              ./README.md
+  - Preflight Test Docs:      ./PREFLIGHT_TEST.md
+  - Configuration Reference:  ./README.md#configuration-reference
+  - Module Details:           ./README.md#module-details
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EOF

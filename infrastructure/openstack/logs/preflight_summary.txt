@@ -1,0 +1,30 @@
+===========================================
+PREFLIGHT TEST SUMMARY
+===========================================
+
+Test Date: 2025-12-06 15:39:57
+Hostname: nics-VMware20-1
+User: nics (UID=1000)
+OS: Ubuntu 24.04
+Kernel: 6.14.0-36-generic
+
+HARDWARE
+--------
+Total RAM: 32095MB (31GB)
+Free RAM: 28371MB
+Disk: 195G (Free: 170GB)
+
+NETWORK
+-------
+Default Interface: ens34
+IPv4 Address: 192.168.0.195/24
+External Connectivity: OK
+DNS: OK
+
+RESULTS
+-------
+✓ Checks Passed: 14
+⚠ Warnings: 1
+✗ Checks Failed: 0
+
+STATUS: READY FOR INSTALLATION

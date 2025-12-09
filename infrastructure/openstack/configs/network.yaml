@@ -1,0 +1,4 @@
+external_cidr: 10.0.2.0/24
+external_gateway_ip: 10.0.2.1
+bridge_name: uplinkbridge
+external_interface: auto

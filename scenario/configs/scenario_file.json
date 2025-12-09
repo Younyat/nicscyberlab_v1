@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": "attack-kali",
+      "name": "kali-attacker",
+      "type": "kali",
+      "properties": {
+        "os": "kali-linux",
+        "image": "kali-latest",
+        "flavor": "cyberlab-medium",
+        "network": "private-net",
+        "subnetwork": "private-subnet",
+        "securityGroup": "cyberlab-secgroup",
+        "sshKey": "cyberlab-key"
+      }
+    },
+    {
+      "id": "victim-ubuntu",
+      "name": "ubuntu-victim",
+      "type": "ubuntu",
+      "properties": {
+        "os": "ubuntu-24.04",
+        "image": "ubuntu-24.04",
+        "flavor": "cyberlab-small",
+        "network": "private-net",
+        "subnetwork": "private-subnet",
+        "securityGroup": "cyberlab-secgroup",
+        "sshKey": "cyberlab-key"
+      }
+    },
+    {
+      "id": "debian-server",
+      "name": "debian-server",
+      "type": "debian",
+      "properties": {
+        "os": "debian-12",
+        "image": "debian-12",
+        "flavor": "cyberlab-small",
+        "network": "private-net",
+        "subnetwork": "private-subnet",
+        "securityGroup": "cyberlab-secgroup",
+        "sshKey": "cyberlab-key"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "attack-kali",
+      "target": "victim-ubuntu",
+      "type": "attack",
+      "description": "Kali attacks Ubuntu"
+    },
+    {
+      "source": "attack-kali",
+      "target": "debian-server",
+      "type": "reconnaissance",
+      "description": "Kali scans Debian"
+    }
+  ],
+  "metadata": {
+    "name": "Basic Cyber Range Scenario",
+    "description": "Simple three-node attack-defense scenario",
+    "version": "1.0",
+    "created": "2025-12-06",
+    "external_network": "external-net"
+  }
+}

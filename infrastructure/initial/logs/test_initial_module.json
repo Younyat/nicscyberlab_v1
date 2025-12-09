@@ -1,0 +1,22 @@
+{"timestamp": "2025-12-06T15:07:44Z", "level": "info", "message": "=== Initial Module Preflight Test Started ==="}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "info", "message": "[TEST 1/10] Checking directory structure"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "Modules directory exists"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "Configuration file exists"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "All required modules present (11 files)"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "All modules are executable"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "info", "message": "[TEST 2/10] Validating JSON syntax"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "jq is installed"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "JSON syntax is valid"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "info", "message": "[TEST 3/10] Checking JSON required fields"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "All required JSON fields present"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "info", "message": "[TEST 4/10] Validating JSON field values"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "External CIDR format valid: 10.0.2.0/24"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "Private CIDR format valid: 192.168.100.0/24"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "All flavor specifications valid"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "info", "message": "[TEST 5/10] Validating image entries"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "success", "message": "Found 5 images in configuration"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "info", "message": "[TEST 6/10] Validating image URLs accessibility"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "warning", "message": "curl not found - skipping URL validation (will be installed by openstack module)"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "warning", "message": "curl not available (non-critical)"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "info", "message": "[TEST 7/10] Checking OpenStack CLI availability"}
+{"timestamp": "2025-12-06T15:07:44Z", "level": "error", "message": "openstack command not found (install with: pip install python-openstackclient)"}

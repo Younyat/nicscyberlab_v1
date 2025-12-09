@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-12-06T19:41:18Z",
+  "url": "http://localhost:5001",
+  "status": "pass",
+  "summary": {
+    "total": 3,
+    "pass": 3,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "endpoint": "/",
+      "status": "pass",
+      "http_code": 200,
+      "time_ms": 29
+    },
+    {
+      "endpoint": "_health",
+      "status": "pass",
+      "http_code": 200,
+      "time_ms": 21
+    },
+    {
+      "endpoint": "api/health",
+      "status": "pass",
+      "http_code": 200,
+      "time_ms": 20
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[2025-12-06 16:07:44] [INFO] === Initial Module Preflight Test Started ===
+[2025-12-06 16:07:44] [INFO] [TEST 1/10] Checking directory structure
+[2025-12-06 16:07:44] [SUCCESS] Modules directory exists
+[2025-12-06 16:07:44] [SUCCESS] Configuration file exists
+[2025-12-06 16:07:44] [SUCCESS] All required modules present (11 files)
+[2025-12-06 16:07:44] [SUCCESS] All modules are executable
+[2025-12-06 16:07:44] [INFO] [TEST 2/10] Validating JSON syntax
+[2025-12-06 16:07:44] [SUCCESS] jq is installed
+[2025-12-06 16:07:44] [SUCCESS] JSON syntax is valid
+[2025-12-06 16:07:44] [INFO] [TEST 3/10] Checking JSON required fields
+[2025-12-06 16:07:44] [SUCCESS] All required JSON fields present
+[2025-12-06 16:07:44] [INFO] [TEST 4/10] Validating JSON field values
+[2025-12-06 16:07:44] [SUCCESS] External CIDR format valid: 10.0.2.0/24
+[2025-12-06 16:07:44] [SUCCESS] Private CIDR format valid: 192.168.100.0/24
+[2025-12-06 16:07:44] [SUCCESS] All flavor specifications valid
+[2025-12-06 16:07:44] [INFO] [TEST 5/10] Validating image entries
+[2025-12-06 16:07:44] [SUCCESS] Found 5 images in configuration
+[2025-12-06 16:07:44] [INFO] [TEST 6/10] Validating image URLs accessibility
+[2025-12-06 16:07:44] [WARNING] curl not found - skipping URL validation (will be installed by openstack module)
+[2025-12-06 16:07:44] [WARNING] curl not available (non-critical)
+[2025-12-06 16:07:44] [INFO] [TEST 7/10] Checking OpenStack CLI availability
+[2025-12-06 16:07:44] [ERROR] openstack command not found (install with: pip install python-openstackclient)

@@ -1,0 +1,45 @@
+{
+    "cleanup": false,
+
+    "images": {
+        "upload": true,
+        "list": {
+            "ubuntu-24.04": "https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.img",
+            "ubuntu-22.04": "https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img",
+            "ubuntu-20.04": "https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img",
+            "debian-12": "https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-genericcloud-amd64.qcow2",
+            "kali-latest": "https://cdimage.kali.org/kali-cloud/kali-latest-cloud-amd64.qcow2"
+        }
+    },
+
+    "networks": {
+        "external": {
+            "name": "external-net",
+            "cidr": "10.0.2.0/24",
+            "subnet_name": "external-subnet"
+        },
+        "private": {
+            "name": "private-net",
+            "cidr": "192.168.100.0/24",
+            "subnet_name": "private-subnet",
+            "dns": ["8.8.8.8", "1.1.1.1"]
+        }
+    },
+
+    "security_group": {
+        "name": "cyberlab-secgroup",
+        "ports": [22, 80, 443, 1514, 1515, 55000, 5601, 8888]
+    },
+
+    "flavors": {
+        "tiny":   { "vcpus": 1, "ram": 512,  "disk": 5  },
+        "small":  { "vcpus": 1, "ram": 1024, "disk": 10 },
+        "medium": { "vcpus": 2, "ram": 2048, "disk": 20 },
+        "large":  { "vcpus": 4, "ram": 4096, "disk": 40 }
+    },
+
+    "keypair": {
+        "name": "cyberlab-key",
+        "path": "~/.ssh/cyberlab-key"
+    }
+}

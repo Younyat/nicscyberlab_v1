@@ -1,0 +1,4 @@
+kolla_base_distro: "ubuntu"
+network_interface: "{{ MAIN_IFACE }}"
+neutron_external_interface: "veth1"
+kolla_internal_vip_address: "{{ VIP }}"
