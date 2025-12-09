@@ -26,7 +26,7 @@ bash "$MODULES_DIR/04_install_kolla.sh"
 bash "$MODULES_DIR/05_configure_kolla.sh"
 
 # 7. Configurar red (veth, bridge, NAT)
-bash "$MODULES_DIR/06_setup_networking.sh"
+#bash "$MODULES_DIR/06_setup_networking.sh"
 
 # 8. Desplegar OpenStack
 bash "$MODULES_DIR/07_deploy_openstack.sh"

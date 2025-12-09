@@ -2,7 +2,7 @@
 PREFLIGHT TEST SUMMARY
 ===========================================
 
-Test Date: 2025-12-06 15:39:57
+Test Date: 2025-12-09 21:26:32
 Hostname: nics-VMware20-1
 User: nics (UID=1000)
 OS: Ubuntu 24.04
@@ -11,8 +11,8 @@ Kernel: 6.14.0-36-generic
 HARDWARE
 --------
 Total RAM: 32095MB (31GB)
-Free RAM: 28371MB
-Disk: 195G (Free: 170GB)
+Free RAM: 30176MB
+Disk: 195G (Free: 171GB)
 
 NETWORK
 -------

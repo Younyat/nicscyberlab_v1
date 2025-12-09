@@ -1,45 +1,45 @@
-[2025-12-06 15:39:56] === OpenStack Preflight Tester Started ===
-[0;34m[2025-12-06 15:39:56][0m [0;34m[INFO][0m === CHECKING EXECUTOR IDENTITY ===
-[0;32m[2025-12-06 15:39:56][0m [0;32m[✓][0m User: nics (UID=1000)
-[0;32m[2025-12-06 15:39:56][0m [0;32m[✓][0m User is member of sudo group
-[0;34m[2025-12-06 15:39:56][0m [0;34m[INFO][0m === CHECKING OS VERSION ===
-[0;32m[2025-12-06 15:39:56][0m [0;32m[✓][0m Ubuntu version 24.04 is supported
-[0;34m[2025-12-06 15:39:56][0m [0;34m[INFO][0m === CHECKING SYSTEM RESOURCES ===
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m RAM requirement satisfied (32095MB >= 6000MB)
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m Disk requirement satisfied (170GB >= 20GB)
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m === CHECKING NETWORK CONNECTIVITY ===
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m External connectivity OK (ping 8.8.8.8)
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m Testing DNS resolution
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m DNS resolution OK (method: dig)
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m === CHECKING PYTHON AVAILABILITY ===
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m Python 3.12.3 found
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m === CHECKING DOCKER STATE ===
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m === CHECKING NETWORK INTERFACES ===
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m Default interface detected: ens34
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m IPv4 address assigned: 192.168.0.195/24
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m === CHECKING PREVIOUS KOLLA INSTALLATION ===
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m No previous Kolla installation detected
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m === CHECKING VIRTUALENV STATE ===
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m Virtualenv directory clean (will be created later)
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m === CHECKING CRITICAL PACKAGES ===
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m Package wget: OK
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m Package git: OK
-[1;33m[2025-12-06 15:39:57][0m [1;33m[⚠][0m Missing packages: curl (will be installed by module 01)
+[2025-12-09 21:26:32] === OpenStack Preflight Tester Started ===
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m === CHECKING EXECUTOR IDENTITY ===
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m User: nics (UID=1000)
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m User is member of sudo group
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m === CHECKING OS VERSION ===
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m Ubuntu version 24.04 is supported
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m === CHECKING SYSTEM RESOURCES ===
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m RAM requirement satisfied (32095MB >= 6000MB)
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m Disk requirement satisfied (171GB >= 20GB)
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m === CHECKING NETWORK CONNECTIVITY ===
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m External connectivity OK (ping 8.8.8.8)
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m Testing DNS resolution
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m DNS resolution OK (method: dig)
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m === CHECKING PYTHON AVAILABILITY ===
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m Python 3.12.3 found
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m === CHECKING DOCKER STATE ===
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m === CHECKING NETWORK INTERFACES ===
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m Default interface detected: ens34
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m IPv4 address assigned: 192.168.0.195/24
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m === CHECKING PREVIOUS KOLLA INSTALLATION ===
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m No previous Kolla installation detected
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m === CHECKING VIRTUALENV STATE ===
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m Virtualenv directory clean (will be created later)
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m === CHECKING CRITICAL PACKAGES ===
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m Package wget: OK
+[0;32m[2025-12-09 21:26:32][0m [0;32m[✓][0m Package git: OK
+[1;33m[2025-12-09 21:26:32][0m [1;33m[⚠][0m Missing packages: curl (will be installed by module 01)
 
 ======================================
 [0;35mPREFLIGHT TEST SUMMARY[0m
 ======================================
 
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m Results:
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m ✓ Checks Passed: 14
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m ⚠ Warnings: 1
-[0;34m[2025-12-06 15:39:57][0m [0;34m[INFO][0m ✗ Checks Failed: 0
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m Results:
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m ✓ Checks Passed: 14
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m ⚠ Warnings: 1
+[0;34m[2025-12-09 21:26:32][0m [0;34m[INFO][0m ✗ Checks Failed: 0
 
 ===========================================
 PREFLIGHT TEST SUMMARY
 ===========================================
 
-Test Date: 2025-12-06 15:39:57
+Test Date: 2025-12-09 21:26:32
 Hostname: nics-VMware20-1
 User: nics (UID=1000)
 OS: Ubuntu 24.04
@@ -48,8 +48,8 @@ Kernel: 6.14.0-36-generic
 HARDWARE
 --------
 Total RAM: 32095MB (31GB)
-Free RAM: 28371MB
-Disk: 195G (Free: 170GB)
+Free RAM: 30176MB
+Disk: 195G (Free: 171GB)
 
 NETWORK
 -------
@@ -65,7 +65,7 @@ RESULTS
 ✗ Checks Failed: 0
 
 STATUS: READY FOR INSTALLATION
-[0;32m[2025-12-06 15:39:57][0m [0;32m[✓][0m System is ready for OpenStack installation
+[0;32m[2025-12-09 21:26:33][0m [0;32m[✓][0m System is ready for OpenStack installation
 [0;32m========================[0m
 [0;32mAll checks passed! ✓[0m
 [0;32m========================[0m
