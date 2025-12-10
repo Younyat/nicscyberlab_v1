@@ -22,11 +22,14 @@ bash "$MODULES_DIR/02_setup_python_venv.sh"
 # 5. Instalar Kolla-Ansible y dependencias Python
 bash "$MODULES_DIR/04_install_kolla.sh"
 
-# 6. Configurar Kolla (configs base, passwords, globals)
-bash "$MODULES_DIR/05_configure_kolla.sh"
+# 6. Configurar red (veth, bridge, NAT)
+bash "$MODULES_DIR/06_setup_networking.sh"
 
-# 7. Configurar red (veth, bridge, NAT)
-#bash "$MODULES_DIR/06_setup_networking.sh"
+# 7. Configurar Kolla (configs base, passwords, globals)
+bash "$MODULES_DIR/05_configure_kolla.sh"
 
 # 8. Desplegar OpenStack
 bash "$MODULES_DIR/07_deploy_openstack.sh"
+
+# 9. Inicializar recursos demo recomendados por la guía oficial
+bash "$MODULES_DIR/08_init_openstack_demo.sh"

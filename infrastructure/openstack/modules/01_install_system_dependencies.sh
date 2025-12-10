@@ -4,13 +4,16 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/log_utils.sh"
 
-log "Instalando dependencias del sistema"
+log "Instalando dependencias base requeridas por Kolla-Ansible (según Quick-Start)"
 
 sudo apt update -y
 sudo apt install -y \
-    python3.12 python3.12-venv python3.12-dev \
-    git iptables bridge-utils wget curl dbus pkg-config \
-    build-essential libdbus-1-dev libglib2.0-dev \
-    apt-transport-https ca-certificates gnupg software-properties-common
+    git \
+    python3 python3-venv python3-dev python3-pip \
+    libffi-dev gcc libssl-dev pkg-config \
+    libdbus-1-dev build-essential cmake libglib2.0-dev \
+    mariadb-server \
+    bridge-utils iptables iproute2 \
+    curl ca-certificates gnupg software-properties-common
 
 log "Dependencias del sistema instaladas correctamente"

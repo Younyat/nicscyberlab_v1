@@ -8,7 +8,7 @@ VENV_PATH="${VENV_PATH:-$HOME/openstack_venv}"
 
 log "Creando entorno virtual en $VENV_PATH"
 
-python3.12 -m venv "$VENV_PATH"
+python3 -m venv "$VENV_PATH"
 # shellcheck source=/dev/null
 source "$VENV_PATH/bin/activate"
 
